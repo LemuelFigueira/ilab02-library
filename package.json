@@ -1,0 +1,47 @@
+{
+  "name": "ilab02-library",
+  "version": "1.0.0",
+  "description": "Biblioteca com o design system da ilab02-figma",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -s public",
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "ilemuelfigueira",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@storybook/addon-actions": "^6.4.10",
+    "@storybook/addon-essentials": "^6.4.10",
+    "@storybook/addon-links": "^6.4.10",
+    "@storybook/react": "^6.4.10",
+    "@types/react": "^17.0.38",
+    "autoprefixer": "^10.4.12",
+    "babel-loader": "^8.2.3",
+    "postcss": "^8.4.18",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.63.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "tailwindcss": "^3.1.8",
+    "tslib": "^2.4.0",
+    "typescript": "^4.5.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/LemuelFigueira/ilab02-library/issues"
+  },
+  "homepage": "https://github.com/LemuelFigueira/ilab02-library#readme"
+}

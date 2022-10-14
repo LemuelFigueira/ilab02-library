@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es2016",
+    "outDir": "dist",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ES2020",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "declaration": true,
+    "declarationDir": "dist",
+//    "baseUrl": ".",
+//    "paths": {
+//      "tslib": ["p"]
+//    }
+  },
+  "include": [
+    "stories"
+  ]
+  // "exclude": [
+  //   "node_modules",
+  //   "dist"
+  // ]
+}
