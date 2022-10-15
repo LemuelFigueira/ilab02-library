@@ -14,7 +14,7 @@
     "declarationDir": "dist"
   },
   "include": [
-    "stories"
+    "src"
   ],
   "exclude": [
     "node_modules",

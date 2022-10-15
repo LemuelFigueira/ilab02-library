@@ -9,7 +9,7 @@ import autoprefixer from "autoprefixer";
 const tailwindConfig = require('./tailwind.config.js');
 
 export default {
-    input: "./stories/index.ts",
+    input: "./src/index.ts",
     output: [
         {
             file: "dist/index.js",

@@ -15,7 +15,7 @@ const sizes = {
 
 export const Button = ({
   size = 'md',
-  label,
+  label,q
   ...props
 }: ButtonProps) => {
 
