@@ -1,7 +1,7 @@
-import React from 'react';
+import React from '../../node_modules/@types/react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button } from './Button';
+import { Button } from './index';
 
 export default {
   title: 'Example/Button',
