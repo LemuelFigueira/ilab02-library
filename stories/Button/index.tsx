@@ -1,5 +1,4 @@
 import React from 'react';
-import '../tailwind.css'
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   size?: 'sm' | 'md' | 'lg' | 'full';
@@ -15,7 +14,7 @@ const sizes = {
 }
 
 export const Button = ({
-  size = 'full',
+  size = 'md',
   label,
   ...props
 }: ButtonProps) => {
