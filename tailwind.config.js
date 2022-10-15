@@ -5,6 +5,14 @@ module.exports = {
       './stories/**/*'
   ],
   theme: {
+    fontSize: {
+      'h-lg': '2.5rem',
+      'h-md': '1.5rem',
+      'h-sm': '2.5rem',
+      'lg': '18px',
+      'md': '16px',
+      'sm': '14px',
+    },
     extend: {
       colors: {
         cyan: {
@@ -21,5 +29,4 @@ module.exports = {
       }
     },
   },
-  plugins: [],
 }
