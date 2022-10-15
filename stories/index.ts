@@ -1,5 +1,3 @@
-import './tailwind.css'
+import './main.css'
 
-import { Button } from './Button';
-
-export { Button };
+export { Button } from './Button.stories';
