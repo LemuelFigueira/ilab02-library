@@ -22,7 +22,7 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={`bg-cyan-500 text-black font-semibold max-w-[400px] ${sizes[size]} rounded active:bg-cyan-500 hover:bg-cyan-300`}
+      className={`select-none bg-cyan-500 text-black font-semibold max-w-[400px] ${sizes[size]} rounded active:bg-cyan-500 hover:bg-cyan-300`}
       {...props}
     >
       {label}
