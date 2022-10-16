@@ -5,6 +5,8 @@ import postcss from "rollup-plugin-postcss";
 import { babel } from '@rollup/plugin-babel';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from "autoprefixer";
+import url from '@rollup/plugin-url'
+import commonjs from '@rollup/plugin-commonjs'
 
 const tailwindConfig = require('./tailwind.config.js');
 
@@ -17,6 +19,7 @@ export default {
         }
     ],
     plugins: [
+        commonjs(),
         peerDepsExternal(),
         resolve(),
         typescript(),
@@ -27,6 +30,9 @@ export default {
                 autoprefixer
             ],
         }),
-        babel()
+        url(),
+        babel({
+            babelHelpers: 'bundled',
+        }),
     ]
 }
