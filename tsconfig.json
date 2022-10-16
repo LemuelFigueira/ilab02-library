@@ -14,7 +14,8 @@
     "declarationDir": "dist"
   },
   "include": [
-    "src"
+    "src",
+    "src/images.d.ts"
   ],
   "exclude": [
     "node_modules",
