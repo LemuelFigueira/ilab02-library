@@ -11,14 +11,9 @@ const sizes = {
   md: 'text-md px-16 py-2',
   lg: 'text-md px-24 py-2',
   full: 'text-md w-full py-2',
-}
+};
 
-export const Button = ({
-  size = 'md',
-  label,
-  ...props
-}: ButtonProps) => {
-
+export const Button = ({ size = 'md', label, ...props }: ButtonProps) => {
   return (
     <button
       type="button"
