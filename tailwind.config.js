@@ -5,10 +5,13 @@ module.exports = {
       './src/**/*'
   ],
   theme: {
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+    },
     fontSize: {
       'h-lg': '2.5rem',
       'h-md': '1.5rem',
-      'h-sm': '2.5rem',
+      'h-sm': '1.25rem',
       'lg': '18px',
       'md': '16px',
       'sm': '14px',
@@ -22,7 +25,7 @@ module.exports = {
         gray: {
           900: '#121214',
           800: '#202024',
-          400: '#7C7CBA',
+          400: '#7C7C8A',
           200: '#C4C4CC',
           100: '#E1E1E6'
         }
