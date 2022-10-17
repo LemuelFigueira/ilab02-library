@@ -1,5 +1,8 @@
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import {Check} from 'phosphor-react'
+import _uniqueId from 'lodash/uniqueId';
+import { useState } from 'react';
+
 interface CheckboxProps {
   children: React.ReactNode;
   checked?: boolean;
@@ -11,6 +14,9 @@ export const Checkbox = ({
   checked = false,
   onCheckedChange
 }:CheckboxProps) => {
+
+  const [id] = useState(_uniqueId('input-'));
+
   return (
     <div className="flex items-center mb-4">
       <CheckboxPrimitive.Root checked={checked} onCheckedChange={onCheckedChange} id="c1" className="w-6 h-6 bg-zinc-900 flex items-center justify-center rounded-lg">
