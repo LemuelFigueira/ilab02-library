@@ -1,6 +1,13 @@
 {
   "name": "ilab02-ui",
   "version": "1.2.4",
+  "author": {
+    "name": "Lemuel Figueira",
+    "url": "https://ilemuelfigueira.dev/",
+    "email": "lfigueiradev@gmail.com"
+  },
+  "repository": "https://github.com/LemuelFigueira/ilab02-library",
+  "license": "MIT",
   "description": "Biblioteca de componentes para a Ignite Lab#02",
   "source": "src/index.ts",
   "main": "dist/main.js",
