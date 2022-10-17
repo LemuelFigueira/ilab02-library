@@ -1,5 +1,4 @@
-import React from 'react';
-import { Label } from './Label';
+import React, { ReactNode } from 'react';
 
 const emailSvg: React.SVGProps<SVGSVGElement> = (
   <svg
@@ -72,7 +71,11 @@ const sizes = {
   full: 'w-full',
 };
 
-const icons = {
+const icons: {
+  email: React.SVGProps<SVGSVGElement> | null;
+  password: React.SVGProps<SVGSVGElement> | null;
+  text:  React.SVGProps<SVGSVGElement> | null;
+} = {
   email: emailSvg,
   text: null,
   password: lockSvg,
@@ -87,11 +90,12 @@ export const Input = ({
 }: InputProps) => {
   return (
     <slot>
-      <label htmlFor="input" className={`max-w-[400px] ${sizes[size]}`}>
+      <label htmlFor="" className={`max-w-[400px] ${sizes[size]}`}>
         <div
           className={`w-full flex items-center border border-transparent focus-within:border-cyan-500 hover:border-cyan-500 bg-gray-800 gap-3 pl-4 py-3 relative rounded`}
         >
-          {icons[type]}
+          <>{icons[type]}</>
+
           <input
             id="input"
             className={`select-none focus:outline-none w-full text-white placeholder:text-gray-400 font-normal text-sm rounded bg-transparent`}
