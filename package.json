@@ -1,5 +1,5 @@
 {
-  "name": "ilab02-library",
+  "name": "ilab02-ui",
   "version": "1.0.0",
   "description": "Biblioteca de componentes para a Ignite Lab#02",
   "source": "src/index.ts",
