@@ -1,7 +1,8 @@
+import React, { useState } from 'react';
+
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import {Check} from 'phosphor-react'
 import _uniqueId from 'lodash/uniqueId';
-import { useState } from 'react';
 
 interface CheckboxProps {
   children: React.ReactNode;
