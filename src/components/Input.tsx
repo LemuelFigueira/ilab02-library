@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import _uniqueId from 'lodash/uniqueId';
 
 const emailSvg: React.SVGProps<SVGSVGElement> = (
   <svg
@@ -74,7 +75,7 @@ const sizes = {
 const icons: {
   email: React.SVGProps<SVGSVGElement> | null;
   password: React.SVGProps<SVGSVGElement> | null;
-  text:  React.SVGProps<SVGSVGElement> | null;
+  text: React.SVGProps<SVGSVGElement> | null;
 } = {
   email: emailSvg,
   text: null,
@@ -88,21 +89,23 @@ export const Input = ({
   type = 'text',
   ...props
 }: InputProps) => {
+
+  const [id] = React.useState(_uniqueId('input-'));
   return (
     <slot>
-      <label htmlFor="" className={`max-w-[400px] ${sizes[size]}`}>
+      <label htmlFor={id} className={`max-w-[400px] ${sizes[size]}`}>
         <div
           className={`w-full flex items-center border border-transparent focus-within:border-cyan-500 hover:border-cyan-500 bg-gray-800 gap-3 pl-4 py-3 relative rounded`}
         >
           <>{icons[type]}</>
-
-          <input
-            id="input"
-            className={`select-none focus:outline-none w-full text-white placeholder:text-gray-400 font-normal text-sm rounded bg-transparent`}
-            placeholder={placeholder}
-            type={type}
-            {...props}
-          />
+            <input
+              name="input"
+              id={id}
+              className={`select-none focus:outline-none w-full text-white placeholder:text-gray-400 font-normal text-sm rounded bg-transparent`}
+              placeholder={placeholder}
+              type={type}
+              {...props}
+            />
         </div>
       </label>
     </slot>
