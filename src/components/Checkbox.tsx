@@ -4,7 +4,7 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import {Check} from 'phosphor-react'
 import _uniqueId from 'lodash/uniqueId';
 
-interface CheckboxProps {
+export interface CheckboxProps {
   children: React.ReactNode;
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
