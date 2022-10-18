@@ -3,9 +3,11 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { Button } from './Button';
 
 # Button
-O `<Button>` é um componente de botão que pode ser usado para ações de clique.
+> O **_`<Button>`_** é um componente de botão que pode ser usado para ações de clique.
 
-### Props
+## _Props_
+
+> Propriedades comuns do componente.
 
 | Prop | Type | Default | Description |
 | :--- | :--- | :------ | :---------- |
@@ -13,8 +15,9 @@ O `<Button>` é um componente de botão que pode ser usado para ações de cliqu
 | `label` | `string` | `undefined` | Define o texto do botão |
 | `onClick` | `function` | `undefined` | Define a função que será executada ao clicar no botão |
 
-## Observação
-**_A Propriedade `full` irá esticar o máximo que puder dentro do container, porém limitada até `400px`._**
+## _Observação_
+
+> A Propriedade `full` irá esticar o máximo que puder dentro do container, porém limitada até `400px`
 
 <Meta title="Docs/Button" component={ Button } />
 
@@ -23,7 +26,7 @@ export const Template = (args) => <Button {...args} />;
 ## Examples
 <Canvas isColumn  withSource="open" withToolbar>
 <Story name="Small" args={{ 
-    label: 'hello' 
+    label: 'Small' 
   }} > 
  {Template.bind({})}
 </Story>
