@@ -59,7 +59,6 @@ export interface InputProps
     React.InputHTMLAttributes<HTMLInputElement>,
     'className' | 'size' | 'type'
   > {
-  label: string;
   size?: 'sm' | 'md' | 'lg' | 'full';
   type?: 'email' | 'text' | 'password';
   onClick?: () => void;
@@ -83,7 +82,6 @@ const icons: {
 };
 
 export const Input = ({
-  label = 'label',
   placeholder = 'johndoe@gmail.com',
   size = 'md',
   type = 'text',
