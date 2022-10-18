@@ -1,0 +1,71 @@
+<!-- Checkbox.stories.mdx -->
+import {useState} from 'react';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import { Checkbox } from './Checkbox';
+
+# Checkbox
+O _**`<Checkbox>`**_ é um componente de botão que pode ser usado para ações de controle de estado.
+
+## Props
+| Prop | Type | Default | Description |
+| :--- | :--- | :------ | :---------- |
+| `children` | `ReactNode<string>` | `undefined` | Conteúdo do botão |
+| `checked` | `boolean` | `false` | Define se o botão está selecionado ou não |
+| `onCheckedChange` | `function` | `() => {}` | Função que será executada quando o botão for clicado |
+
+<Meta title="Docs/Checkbox" component={ Checkbox } />
+
+export const Template = (args) => <Checkbox {...args} />;
+
+# Demo
+
+> Checked
+
+<Canvas>
+  <Story name="Checked" args={{
+    children: 'Lembrar de mim por 30 dias',
+    checked: true
+  }}>
+  {({children, checked}) => {
+      return (
+        <Checkbox checked={checked}>
+          {children}
+        </Checkbox>
+      )
+  }}
+  </Story>
+</Canvas>
+
+> Unchecked
+
+<Canvas>
+  <Story name="Unchecked" args={{
+    children: 'Lembrar de mim por 30 dias',
+    checked: false
+  }}>
+  {({children, checked}) => {
+      return (
+        <Checkbox checked={checked}>
+          {children}
+        </Checkbox>
+      )
+  }}
+  </Story>
+</Canvas>
+
+> Aqui você pode ver o componente em ação, basta interagir com o componente
+
+<Canvas isColumn  withSource="open" withToolbar>
+<Story name="Demo" args={{ 
+    children: 'Lembrar de mim por 30 dias'
+  }} > 
+ {({children}) => {
+    const [checked, setChecked] = useState(false);
+    return (
+      <Checkbox checked={checked} onCheckedChange={setChecked}>
+        {children}
+      </Checkbox>
+    )
+ }}
+</Story>
+</Canvas>
