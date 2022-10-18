@@ -24,42 +24,26 @@ export const Template = (args) => <Checkbox {...args} />;
     children: 'Checked',
     checked: true
   }}>
-  {({children, checked}) => {
-      return (
-        <Checkbox checked={checked}>
-          {children}
-        </Checkbox>
-      )
+  {({children}) => {
+    const [checked, setChecked] = useState(true);
+    return (
+      <Checkbox checked={checked} onCheckedChange={setChecked}>
+        {children}
+      </Checkbox>
+    )
   }}
   </Story>
   <Story name="Unchecked" args={{
     children: 'Unchecked',
     checked: false
   }}>
-  {({children, checked}) => {
-      return (
-        <Checkbox checked={checked}>
-          {children}
-        </Checkbox>
-      )
-  }}
-  </Story>
-</Canvas>
-
-> Aqui você pode ver o componente em ação, basta interagir com o componente
-
-<Canvas isColumn  withSource="closed" withToolbar>
-<Story name="Demo" args={{ 
-    children: 'Digite aqui um texto alternativo',
-    checked: false
-  }} > 
- {({children}) => {
+  {({children}) => {
     const [checked, setChecked] = useState(false);
     return (
       <Checkbox checked={checked} onCheckedChange={setChecked}>
         {children}
       </Checkbox>
     )
- }}
-</Story>
+  }}
+  </Story>
 </Canvas>
