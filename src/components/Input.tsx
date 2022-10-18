@@ -1,5 +1,5 @@
-import React from 'react';
 import _uniqueId from 'lodash/uniqueId';
+import React from 'react';
 
 const emailSvg: React.SVGProps<SVGSVGElement> = (
   <svg
@@ -90,10 +90,9 @@ export const Input = ({
 
   const [id] = React.useState(_uniqueId('input-'));
   return (
-    <slot>
-      <label htmlFor={id} className={`max-w-[400px] ${sizes[size]}`}>
+      <label htmlFor={id}>
         <div
-          className={`w-full flex items-center border border-transparent focus-within:border-cyan-500 hover:border-cyan-500 bg-gray-800 gap-3 pl-4 py-3 relative rounded`}
+          className={`max-w-[400px] ${sizes[size]} flex items-center border border-transparent focus-within:border-cyan-500 hover:border-cyan-500 bg-gray-800 gap-3 pl-4 py-3 relative rounded`}
         >
           <>{icons[type]}</>
             <input
@@ -106,6 +105,5 @@ export const Input = ({
             />
         </div>
       </label>
-    </slot>
   );
 };
