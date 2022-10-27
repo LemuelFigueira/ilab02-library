@@ -15,8 +15,8 @@
   "types": "dist/types.d.ts",
   "isLibrary": true,
   "scripts": {
-    "watch": "parcel watch",
-    "build": "parcel build",
+    "watch": "parcel watch ./src/index.ts",
+    "build": "parcel build ./src/index.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
